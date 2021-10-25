@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package convertisseur_godard_thomas;
+package tp1_convertisseur_godard_thomas;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author 33666
  */
-public class Convertisseur_GODARD_THOMAS {
+public class TP1_convertisseur_GODARD_THOMAS {
 
     /**
      * @param args the command line arguments
