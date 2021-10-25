@@ -20,12 +20,9 @@ public class TP1_convertisseur_GODARD_THOMAS {
         sc = new Scanner(System.in);
         System.out.println("entrer un réel");
         float ent1 = sc.nextFloat();
-        float ent2 = ent1 + 273,2 ;
         System.out.println(ent1+"°C");
-        System.out.println(ent2+"K");
-        
-    
-  
+
+         
 
 
         int rep;
