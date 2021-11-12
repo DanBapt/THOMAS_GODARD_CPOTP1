@@ -9,14 +9,22 @@ package tp2_bieres_thomas_godard;
  * @author danielthomas
  */
 public class BouteilleBiere {
-//    Nom : le nom de la bière, sous forme de String
-//- degreAlcool : son degré d’alcool sous forme de float
-//- brasserie : le nom de brasserie qui la produit, sous forme de String
-//- ouverte : il s’agit d’un booléen indiquant si la bouteille a été ouverte (la valeur de ouverte sera
-//à vrai), ou non (la valeur de ouverte sera à faux)
-    
-   String Nom;
-   float degreAlcool;
-   String brasserie;
-   boolean ouverte;
+
+    String Nom;
+    double degreAlcool;
+    String brasserie;
+    boolean ouverte;
+
+    public void lireEtiquette() {
+
+        System.out.println("Bouteille de " + Nom + " (" + degreAlcool + " degres) \nBrasserie : " + brasserie);
+        
+    }
+public BouteilleBiere(String unNom, double unDegre, String uneBrasserie) {
+ Nom = unNom;
+ degreAlcool = unDegre;
+ brasserie = uneBrasserie;
+ ouverte = false;
 }
+}
+
