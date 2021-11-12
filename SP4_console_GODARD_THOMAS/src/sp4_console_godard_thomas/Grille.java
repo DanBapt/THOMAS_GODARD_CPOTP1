@@ -8,10 +8,6 @@ package sp4_console_godard_thomas;
  *
  * @author danielthomas
  */
-public class Joueur {
-    String Nom;
-    String Couleur; 
-    Jeton [] Liste Jeton;
-    int nombreDesintegrateur;
-    int nombreJetonsRestants;
+public class Grille {
+//    int [] Cellule = new int
 }
