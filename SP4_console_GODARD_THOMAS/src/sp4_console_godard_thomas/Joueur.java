@@ -4,6 +4,25 @@
  */
 package sp4_console_godard_thomas;
 
+
+//Classe joueur :
+//Attributs :
+//• Nom : nom du joueur
+//• Couleur : couleur affectée au joueur
+//• ListeJetons : tableau de 21 cases décrivant les jetons encore en possession du
+//joueur
+//• nombreJetonsRestants: nombre de jetons restant en possession du joueur,
+//correspondant à la taille effective de ListeJetons
+//• nombreDesintegrateurs : nombre de désintégrateurs actuellement en possession
+//Méthodes :
+//• Joueur (String) : constructeur initialisant le nom du joueur avec son paramètre
+//• affecterCouleur(String): affecte la couleur en paramètre au joueur
+//• ajouterJeton(Jeton) : ajoute le jeton passé en paramètre à la liste des jetons
+//• obtenirDesintegrateur() : incrémente le nombre de désintégrateurs du joueur
+//• utiliserDesintegrateur() : décrémente le nombre de désintégrateurs et confirme
+//l’utilisation de ce dernier, ou renvoie faux s’il ne restait plus de désintégrateurs.
+//
+
 /**
  *
  * @author danielthomas
@@ -11,7 +30,24 @@ package sp4_console_godard_thomas;
 public class Joueur {
     String Nom;
     String Couleur; 
-    Jeton [] Liste Jeton;
+    Jeton [] ListeJeton;
     int nombreDesintegrateur;
     int nombreJetonsRestants;
+
+ public String Joueur(String unNom ){
+     Nom = unNom;
+     return Nom ; 
+ }
+ 
+ public String affecterCouleur(String uneCouleur){
+     Couleur = uneCouleur;
+     return Couleur;
+ }
+// affecterCouleur(String): affecte la couleur en paramètre au joueur }
+ 
+ public Jeton ajouterJeton(){
+//     ajouterJeton(Jeton) : ajoute le jeton passé en paramètre à la liste des jetons
+
+//retourner une valeur de type jeton 
+ }
 }
