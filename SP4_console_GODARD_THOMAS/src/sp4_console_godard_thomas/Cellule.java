@@ -13,10 +13,18 @@ public class Cellule {
     boolean trouNoir;
     boolean desintegrateur;
     public void Cellule(){
-        
+        jetonCourant=null;
+        desintegrateur=false;
+        trouNoir=false;
     }
-    public boolean affecterJeton(Jeton){
-        
+    public boolean affecterJeton(Jeton jtn){
+        if(jetonCourant==null){
+            jtn=jetonCourant;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     public Jeton recupererJeton(){
         
@@ -31,13 +39,28 @@ public class Cellule {
         
     }
     public boolean presenceTrouNoir(){
-        
+        if (trouNoir==true){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     public boolean presenceDesintegrateur(){
-        
+        if (desintegrateur==true){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     public String lireCouleurDuJeton(){
-        
+        if (jetonCourant==null){
+            return "vide";
+        }
+        else{
+            return jetonCourant.Couleur;
+        }
     }
     public boolean recupererDesintegrateur(){
         
