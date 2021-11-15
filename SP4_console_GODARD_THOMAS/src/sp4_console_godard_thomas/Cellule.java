@@ -12,6 +12,7 @@ public class Cellule {
     Jeton jetonCourant;
     boolean trouNoir;
     boolean desintegrateur;
+    
     public void Cellule(){
         jetonCourant=null;
         desintegrateur=false;

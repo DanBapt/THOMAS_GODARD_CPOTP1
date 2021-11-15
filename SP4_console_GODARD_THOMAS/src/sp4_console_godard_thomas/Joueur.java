@@ -30,24 +30,31 @@ package sp4_console_godard_thomas;
 public class Joueur {
     String Nom;
     String Couleur; 
-    Jeton [] ListeJeton;
-    int nombreDesintegrateur;
-    int nombreJetonsRestants;
+   Jeton ListeJeton[]= new Jeton [21];
+   int nombreJetonsRestants = 0;
+   int nombreDesintegrateur;
 
- public String Joueur(String unNom ){
-     Nom = unNom;
-     return Nom ; 
+
+ public void Joueur(String unNom ){
+     Nom = unNom; 
  }
  
- public String affecterCouleur(String uneCouleur){
+ public void affecterCouleur(String uneCouleur){
      Couleur = uneCouleur;
-     return Couleur;
  }
 // affecterCouleur(String): affecte la couleur en paramètre au joueur }
  
- public Jeton ajouterJeton(){
+ public boolean ajouterJeton(Jeton j){ 
 //     ajouterJeton(Jeton) : ajoute le jeton passé en paramètre à la liste des jetons
+for(int i=0; i<ListeJeton.length; i++){
+    if (ListeJeton[i]==null){
+        nombreJetonsRestants=nombreJetonsRestants+1;
+        ListeJeton[i]=j;
+            return true;
 
+    }
+    return false;
+}
 //retourner une valeur de type jeton 
  }
-}
+}      

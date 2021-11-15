@@ -23,9 +23,7 @@ public class Jeton {
     }
     public String lireCouleur(){
 //      renvoie la couleur du jeton
-    String chainearetourner;
-    chainearetourner = "la couleur est" + Couleur;
-    return chainearetourner;
+    return Couleur;
     }
 } 
         
