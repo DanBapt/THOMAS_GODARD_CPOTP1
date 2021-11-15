@@ -12,4 +12,37 @@ public class Cellule {
     Jeton jetonCourant;
     boolean trouNoir;
     boolean desintegrateur;
+    public void Cellule(){
+        
+    }
+    public boolean affecterJeton(Jeton){
+        
+    }
+    public Jeton recupererJeton(){
+        
+    }
+    public boolean supprimerJeton(){
+        
+    }
+    public boolean placerTrouNoir(){
+        
+    }
+    public boolean placerDesintegrateur(){
+        
+    }
+    public boolean presenceTrouNoir(){
+        
+    }
+    public boolean presenceDesintegrateur(){
+        
+    }
+    public String lireCouleurDuJeton(){
+        
+    }
+    public boolean recupererDesintegrateur(){
+        
+    }
+    public boolean activerTrouNoir(){
+        
+    }
 }
