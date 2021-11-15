@@ -9,5 +9,5 @@ package sp4_console_godard_thomas;
  * @author danielthomas
  */
 public class Grille {
-//    int [] Cellule = new int
+    Cellule tab[][]=new Cellule[6][7]; 
 }
