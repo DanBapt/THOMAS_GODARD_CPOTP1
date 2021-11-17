@@ -35,7 +35,7 @@ public class Joueur {
    int nombreDesintegrateur;
 
 
- public void Joueur(String unNom ){
+ public  Joueur(String unNom ){
      Nom = unNom; 
  }
  
