@@ -72,6 +72,36 @@ else{
 joueurCourant=ListeJoueurs[1];
 deuxieme = ListeJoueurs[0];
 }
+ grilleJeu.afficherGrilleSurConsole();
+        while(grilleJeu.etreGagnantePourJoueur(deuxieme) == false && grilleJeu.etreRemplie() == false) {
+            
+            System.out.println(joueurCourant.Nom + ", choisissez une colonne");
+            Scanner sc = new Scanner(System.in);
+            int colonnechoisie = sc.nextInt();
+            while (colonnechoisie<0 || colonnechoisie>6) {
+                System.out.println("Valeur impossible, il faut choisir entre 0 et 6 inclus!");
+                colonnechoisie = sc.nextInt();
+            }
+            
+            grilleJeu.ajouterJetonDansColonne(joueurCourant.ListeJetons[joueurCourant.nombreJetonsRestants-1], colonnechoisie);
+            joueurCourant.ListeJetons[joueurCourant.nombreJetonsRestants-1]=null;
+            joueurCourant.nombreJetonsRestants--;
+            if (joueurCourant==ListeJoueurs[0]) {
+                joueurCourant = ListeJoueurs[1];
+                deuxieme=ListeJoueurs[0];
+            }
+            else {
+                joueurCourant = ListeJoueurs[0];
+                deuxieme=ListeJoueurs[1];
+            }
+            grilleJeu.afficherGrilleSurConsole();
+        }
+        if (grilleJeu.etreGagnantePourJoueur(deuxieme) == true) {
+            System.out.println(deuxieme.Nom + " gagne la partie!");
+        }
+        else {
+            System.out.println("Partie terminée, la grille est pleine!");
+        }
+    }
+}  
 
-}   
-}
