@@ -30,7 +30,7 @@ package sp4_console_godard_thomas;
 public class Joueur {
     String Nom;
     String Couleur; 
-   Jeton ListeJeton[]= new Jeton [21];
+   Jeton ListeJetons[]= new Jeton [21];
    int nombreJetonsRestants = 0;
    int nombreDesintegrateur;
 
@@ -46,10 +46,10 @@ public class Joueur {
  
  public boolean ajouterJeton(Jeton j){ 
 //     ajouterJeton(Jeton) : ajoute le jeton passé en paramètre à la liste des jetons
-for(int i=0; i<ListeJeton.length; i++){
-    if (ListeJeton[i]==null){
+for(int i=0; i<ListeJetons.length; i++){
+    if (ListeJetons[i]==null){
         nombreJetonsRestants=nombreJetonsRestants+1;
-        ListeJeton[i]=j;
+        ListeJetons[i]=j;
             return true;
 
     }
