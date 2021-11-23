@@ -31,7 +31,7 @@ public class Cellule {
           return(jetonCourant);
     }
     public boolean supprimerJeton(){
-        if(jetonCourant!=null) {
+        if(jetonCourant!=null) { //danib
 
             jetonCourant=null;
 
