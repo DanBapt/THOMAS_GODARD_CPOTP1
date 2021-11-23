@@ -39,7 +39,12 @@ public class Grille {
         }
     }
     public String lireCouleurDuJeton(int i, int j){
-        return CellulesJeu[i][j];
+        if (celluleOccupee(i,j)){
+            return CellulesJeu[i][j].jetonCourant.Couleur; 
+        }
+        else {
+            return "pas de couleur";
+        }
     }
     public boolean etreGagnantePourJoueur(Joueur joueur){
         
@@ -54,13 +59,13 @@ public class Grille {
             }
         }
     }
-    public boolean placerDesintegrateur(int x, int y){
-        
+    public boolean placerDesintegrateur(int i, int j){
+        return CellulesJeu[i][j].placerDesintegrateur();
     }
-    public boolean placerTrouNoir(int x,int y){
-        
+    public boolean placerTrouNoir(int i,int j){
+        return CellulesJeu[i][j].presenceTrouNoir();
     }
-    public boolean supprimerJeton(int x,int y){
-        
+    public boolean supprimerJeton(int i,int j){
+        return CellulesJeu[i][j].supprimerJeton();
     }
 }
