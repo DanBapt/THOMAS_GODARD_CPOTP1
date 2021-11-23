@@ -27,18 +27,22 @@ public class Cellule {
             return false;
         }
     }
-//    public Jeton recupererJeton(){
-//        
-//    }
-//    public boolean supprimerJeton(){
-//        
-//    }
-//    public boolean placerTrouNoir(){
-//        
-//    }
-//    public boolean placerDesintegrateur(){
-//        
-//    }
+    public Jeton recupererJeton(){
+          return(jetonCourant);
+    }
+    public boolean supprimerJeton(){
+        if(jetonCourant!=null) {
+
+            jetonCourant=null;
+
+            return(true);
+    }
+    public boolean placerTrouNoir(){
+        
+    }
+    public boolean placerDesintegrateur(){
+        
+    }
     public boolean presenceTrouNoir(){
         if (trouNoir==true){
             return true;
@@ -63,10 +67,10 @@ public class Cellule {
             return jetonCourant.Couleur;
         }
     }
-//    public boolean recupererDesintegrateur(){
-//        
-//    }
-//    public boolean activerTrouNoir(){
-//        
-//    }
+    public boolean recupererDesintegrateur(){
+        return (desintegrateur);
+    }
+    public boolean activerTrouNoir(){
+        
+    }
 }
