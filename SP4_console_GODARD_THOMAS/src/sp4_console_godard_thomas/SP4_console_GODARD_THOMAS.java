@@ -31,20 +31,30 @@ Scanner sc = new Scanner(System.in);
         nomJ2=sc.nextLine(); 
         Joueur J2= new Joueur(nomJ2);
        
-        // test couleur 
-        Jeton j = new Jeton("Rouge");
-        String c= j.lireCouleur();
-        System.out.println("couleur : "+ c);
-        
+        // test couleur jeton
+//        Jeton j = new Jeton("Rouge");
+//        String c= j.lireCouleur();
+//        System.out.println("couleur : "+ c);
+//        
 //        J1.attribuerCouleursAuxJoueurs();
 //        System.out.println(J1.Couleur);
 //        
 
 
 
-Partie p=new Partie(J1);
-System.out.println(J1.Couleur);
+Partie p= new Partie(J1,J2);
+p.attribuerCouleursAuxJoueurs();
+System.out.println("couleur J1 :"+J1.Couleur);
+System.out.println("couleur J2 :"+J2.Couleur);
+p.ListeJoueurs[0]=J1;
+p.ListeJoueurs[1]=J2;
+Jeton jetonJ1 = new Jeton(J1.Couleur);
+Jeton jetonJ2 = new Jeton(J2.Couleur);
+for (int i=0; i<21; i++) {
+            J1.ListeJetons[i]=jetonJ1;
+            J2.ListeJetons[i]=jetonJ2;
 
     }
-    
+
+}
 }
