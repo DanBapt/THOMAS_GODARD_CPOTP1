@@ -73,8 +73,5 @@ joueurCourant=ListeJoueurs[1];
 deuxieme = ListeJoueurs[0];
 }
 
+}   
 }
-
-
-}
-        
