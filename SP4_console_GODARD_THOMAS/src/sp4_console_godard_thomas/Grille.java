@@ -13,8 +13,23 @@ public class Grille {
     public void Grille(){
         CellulesJeu=new Cellule [6][7];
     }
-    public boolean ajouterJetonDansColonne(Jeton jtn,int x){
+    public boolean ajouterJetonDansColonne(Jeton jtn,int colonne){
+        int ligne=0;
+        while (ligne<6 && CellulesJeu[ligne][colonne].jetonCourant==null){ 
+            ligne++; 
+        }
+        if (ligne==0) {
+            return false;
+        }
+        else {
+            ligne--;
+            CellulesJeu[ligne][colonne].jetonCourant=jtn;
         
+            if (CellulesJeu[ligne][colonne].presenceTrouNoir()==true){
+                CellulesJeu[ligne][colonne].activerTrouNoir();
+            }
+            return true;
+        }
     }
     public boolean etreRemplie(){
         for (int i=0;i<6;i++){
