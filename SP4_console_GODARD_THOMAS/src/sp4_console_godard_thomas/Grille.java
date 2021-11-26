@@ -68,4 +68,7 @@ public class Grille {
     public boolean supprimerJeton(int i,int j){
         return CellulesJeu[i][j].supprimerJeton();
     }
+    public Jeton recupererJeton(int i,int j){
+        return CellulesJeu[i][j].recupererJeton();
+    }
 }
