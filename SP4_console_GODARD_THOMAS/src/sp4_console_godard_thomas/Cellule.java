@@ -33,7 +33,10 @@ public class Cellule {
     public boolean supprimerJeton(){
         if(jetonCourant!=null) {
             jetonCourant=null;
-            return(true);
+            return true;
+        }
+        else{
+            return false;
         }
     }
     public boolean placerTrouNoir(){
@@ -81,8 +84,8 @@ public class Cellule {
     public boolean recupererDesintegrateur(){
         return (desintegrateur);
     }
-//    public boolean activerTrouNoir(){
-//        
-//    }
+    public boolean activerTrouNoir(){
+        
+    }
 }
 
