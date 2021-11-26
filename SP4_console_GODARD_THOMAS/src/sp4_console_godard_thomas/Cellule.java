@@ -80,7 +80,8 @@ public class Cellule {
     public boolean recupererDesintegrateur(){
         return (desintegrateur);
     }
-    public boolean activerTrouNoir(){
-        
-    }
+//    public boolean activerTrouNoir(){
+//        
+//    }
 }
+
