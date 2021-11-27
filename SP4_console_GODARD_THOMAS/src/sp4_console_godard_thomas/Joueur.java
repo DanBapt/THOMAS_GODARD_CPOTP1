@@ -30,13 +30,16 @@ package sp4_console_godard_thomas;
 public class Joueur {
     String Nom;
     String Couleur; 
-   Jeton ListeJetons[]= new Jeton [21];
-   int nombreJetonsRestants = 0;
+   Jeton ListeJetons[];
+   int nombreJetonsRestants;
    int nombreDesintegrateur;
 
 
  public  Joueur(String unNom ){
      Nom = unNom; 
+     ListeJetons=new Jeton [21];
+        nombreJetonsRestants=0;
+        nombreDesintegrateur=0;
  }
  
  public void affecterCouleur(String uneCouleur){
@@ -57,4 +60,17 @@ for(int i=0; i<ListeJetons.length; i++){
 //retourner une valeur de type jeton 
         return false;
 }
-}      
+ public void obtenirDesintegrateur(){
+     nombreDesintegrateur++;
+ }
+ public boolean utiliserDesintegrateur(){
+    if (nombreDesintegrateur==0){
+            return false;
+        }
+        else {
+            nombreDesintegrateur--;
+            return true;
+        }
+    } 
+ 
+}
