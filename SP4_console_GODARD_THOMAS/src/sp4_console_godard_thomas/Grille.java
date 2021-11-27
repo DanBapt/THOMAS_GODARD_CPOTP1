@@ -38,33 +38,6 @@ public class Grille {
             return true;
         }
     }
-//    public boolean ajouterJetonDansColonne(Jeton jtn,int colonne, Joueur joueurcourant){
-//        int ligne=0;
-//        while (ligne<6 && CellulesJeu[ligne][colonne].jetonCourant==null){
-//            ligne++;
-//        }
-//        if (ligne==0) {
-//            return false;
-//        }
-//        else {
-//            ligne--;
-//            CellulesJeu[ligne][colonne].jetonCourant=jtn;
-//        if (presenceTrouNoir(ligne,colonne)){ // pour le 1.1
-//                CellulesJeu[ligne][colonne].activerTrouNoir(); //pour le 1.1
-//            }
-//            if (CellulesJeu[ligne][colonne].presenceTrouNoir()){// pour le 1.3
-//                CellulesJeu[ligne][colonne].recupererDesintegrateur();
-//                joueurcourant.nombreDesintegrateur++;// si il y a presence d'un desintegrateur on le supprime avec recupererdesintegrateur puis on incremente son nombre de desintegrateur qu'il a en sa possession.
-//            }
-//            return true;
-//        }
-//    }
-////            if (CellulesJeu[ligne][colonne].presenceTrouNoir()==true){
-////                CellulesJeu[ligne][colonne].activerTrouNoir();
-////            }
-////            return true;
-////        }
-////    }
     public boolean etreRemplie(){
         for (int j=0; j<7; j++){
             for (int i=0; i<6;i++){ 
