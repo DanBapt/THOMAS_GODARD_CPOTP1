@@ -32,7 +32,7 @@ public class Partie {
     
     public void initialiserPartie(){
         // la grille est deja creer aux niveaux des attributs de la partie
-        Grillejeu.viderGrille();// on la vide
+       // Grillejeu.viderGrille();// on la vide
         // recuperons les noms des joueurs
         
         String nom1; 
@@ -56,6 +56,7 @@ public class Partie {
         for (int t=0;t<2;t++){// on va placer les 2 desintegrateurs et 2 trou noirs qui sont ensemble
             int i = r.nextInt(6);// on genere un nombre aleatoire entre 0 et 6
             int j = r.nextInt(7);// on genere un nombre aleatoire entre 0 et 7
+
             if(Grillejeu.placerTrouNoir(i,j)){   
                 Grillejeu.placerDesintegrateur(i,j);
             }
@@ -113,12 +114,13 @@ public class Partie {
         // on initialise la partie
         //initialiserPartie();
        
-        Grillejeu.afficherGrilleSurConsole();
+   Grillejeu.afficherGrilleSurConsole();
         while (Grillejeu.etreGagnantePourJoueur(ListeJoueurs[0])==false && Grillejeu.etreGagnantePourJoueur(ListeJoueurs[1])==false){// tant que aucun des joueurs n'a gagne on reste dans la boucle, meme si la grille est remplie ou bien que les joueurs n'ont plus de jetons la partie continue car il y a la fonctionnalité recuperer un jeton.
             Scanner sc;
             int choix;
             do{
             sc = new Scanner(System.in);
+            System.out.println();
             System.out.println("tapez 1 si vous souhaitez jouer un jeton, tapez 2 si vous souhaitez récuperer un jeton et tapez 3 si vous souhaitez désintegrer un jeton");
             choix=sc.nextInt();
             if (choix==3){

@@ -10,7 +10,7 @@ package sp4_console_godard_thomas;
  */
 public class Grille {
     Cellule [][] CellulesJeu=new Cellule[6][7];
-    public void Grille(){
+    public  Grille(){
         for (int i=0; i<6; i++){
             for (int j = 0; j < 7; j++) {
                 CellulesJeu[i][j] = new Cellule();
@@ -19,6 +19,7 @@ public class Grille {
     }
     public boolean ajouterJetonDansColonne(Jeton jeton, int colonne, Joueur joueurcourant){// j'ai rajouté une entree de type joueur pour pouvoir incrementer son nombre de desintegrateur.
         int i=0;
+                    System.out.println();
         while (i<6 && CellulesJeu[i][colonne].jetonCourant==null){ 
             i++; // i augmente de 1 si la cellule est vide cela signifie que l'on descend de 1 dans la colonne 
         }
@@ -67,18 +68,18 @@ public class Grille {
             for (int j=0; j<7; j++){
                 if (CellulesJeu[i][j].jetonCourant!=null){
                     if(CellulesJeu[i][j].jetonCourant.Couleur=="rouge"){
-                        System.out.print(" R ");
+                        System.out.print("R ");
                     }
                     else{
-                        System.out.print(" J ");
+                        System.out.print("J ");
                     }
                 }
                 else {
                     if(CellulesJeu[i][j].trouNoir){
-                        System.out.print(" T ");
+                        System.out.print("T ");
                     }
                     else if(CellulesJeu[i][j].desintegrateur && CellulesJeu[i][j].trouNoir==false){
-                        System.out.print(" D ");
+                        System.out.print("D ");
                     }
                     else {
                         System.out.print("  ");
