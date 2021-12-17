@@ -18,14 +18,21 @@ class Grille {
         }
     }
     public boolean etreGagnant(){
+        boolean a =true;
         for (int i=0;i<5;i++){
             for (int j=0;i<5;j++){
                 if (BoutonJeu[i][j].couleur=="blanc"){
                     return false;
-                }
-        if (BoutonJeu)
+                    a=false;
                 }
             }
         }
+        if (a==true){
+            return true;
+        }
+        
+    }
+    public void selectBouton(int i,int j){
+        
     }
 }
