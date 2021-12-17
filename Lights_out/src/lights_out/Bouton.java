@@ -9,5 +9,8 @@ package lights_out;
  * @author danielthomas
  */
 public class Bouton {
-    
+    String couleur;
+    public Bouton(String unecouleur){
+        couleur=unecouleur;
+    }
 }
