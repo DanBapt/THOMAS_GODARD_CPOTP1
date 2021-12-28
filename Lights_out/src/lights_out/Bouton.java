@@ -10,12 +10,11 @@ package lights_out;
  */
 public class Bouton {
     String couleur;
-    public Bouton(String unecouleur){
+    boolean on;
+    
+    public Bouton(String unecouleur, boolean fab ){
         couleur=unecouleur;
+        on= fab;
     }
-
-    public Bouton(boolean bool) {
-      bool = true ; 
-      }
 
 }

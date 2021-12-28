@@ -10,8 +10,11 @@ import java.util.Scanner;
  * @author danielthomas
  */
 public class PartieL {
-    Grille GrilleJeu = new Grille(); 
-    
+    Grille GrilleJeu= new Grille(); 
+    public void aleat(int l, int c){
+       Grille[l][c] != Grille[l][c];
+    }
+           
     public void initialiserPartieL(){
     String nom; 
     Scanner sc; 

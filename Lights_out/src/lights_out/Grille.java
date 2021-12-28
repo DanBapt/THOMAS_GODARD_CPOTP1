@@ -9,15 +9,15 @@ package lights_out;
  * @author danielthomas
  */
 class Grille {
-    Bouton [][] BoutonJeu=new Bouton;
-
-
     int taille; 
+    Bouton [][] BoutonJeu=new Bouton[taille][taille];
+
    public Grille(int taille){
          for (int i=0;i<taille;i++){
             for (int j=0;j<taille;j++){
-                BoutonJeu[i][j]= new Bouton();   
+                BoutonJeu[i][j]= new Bouton();
             }
          }
     }
+   
 }
