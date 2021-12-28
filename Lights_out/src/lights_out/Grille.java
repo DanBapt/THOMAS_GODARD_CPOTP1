@@ -9,30 +9,15 @@ package lights_out;
  * @author danielthomas
  */
 class Grille {
-    Bouton [][] BoutonJeu=new Bouton[5][5];
-    public Grille(){
-        for (int i=0;i<5;i++){
-            for (int j=0;j<5;j++){
-                BoutonJeu[i][j]=new Bouton();
+    Bouton [][] BoutonJeu=new Bouton;
+
+
+    int taille; 
+   public Grille(int taille){
+         for (int i=0;i<taille;i++){
+            for (int j=0;j<taille;j++){
+                BoutonJeu[i][j]= new Bouton();   
             }
-        }
-    }
-    public boolean etreGagnant(){
-        boolean a =true;
-        for (int i=0;i<5;i++){
-            for (int j=0;i<5;j++){
-                if (BoutonJeu[i][j].couleur=="blanc"){
-                    return false;
-                    a=false;
-                }
-            }
-        }
-        if (a==true){
-            return true;
-        }
-        
-    }
-    public void selectBouton(int i,int j){
-        
+         }
     }
 }

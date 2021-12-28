@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package lights_out;
+import java.util.Scanner;
 
 /**
  *
@@ -10,4 +11,11 @@ package lights_out;
  */
 public class PartieL {
     Grille GrilleJeu = new Grille(); 
+    
+    public void initialiserPartieL(){
+    String nom; 
+    Scanner sc; 
+    sc= new Scanner("taper votre nom"); 
+    nom=sc.nextLine();
+    }
 }

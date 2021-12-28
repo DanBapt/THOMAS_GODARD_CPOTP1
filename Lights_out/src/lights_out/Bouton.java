@@ -13,4 +13,9 @@ public class Bouton {
     public Bouton(String unecouleur){
         couleur=unecouleur;
     }
+
+    public Bouton(boolean bool) {
+      bool= true ; 
+      }
+
 }

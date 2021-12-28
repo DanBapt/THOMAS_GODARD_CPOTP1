@@ -16,6 +16,7 @@ public class Lights_out {
     public static void main(String[] args) {
         // TODO code application logic here
     Grille g=new Grille();
+    System.out.print(g);
     }
     
 }
