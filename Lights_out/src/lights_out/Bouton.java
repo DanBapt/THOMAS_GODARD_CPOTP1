@@ -15,7 +15,7 @@ public class Bouton {
     }
 
     public Bouton(boolean bool) {
-      bool= true ; 
+      bool = true ; 
       }
 
 }
