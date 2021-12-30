@@ -4,6 +4,8 @@
  */
 package lights_out;
 
+import java.util.Scanner;
+
 /**
  *
  * @author danielthomas
@@ -13,10 +15,29 @@ public class Lights_out {
     /**
      * @param args the command line arguments
      */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
-    PartieL g=new PartieL(5);
-    System.out.print(g);
-    }
-    
+        
+        
+//        // TODO code application logic here
+//    PartieL g=new PartieL(5);
+//    System.out.print(g);
+//    }
+
+Scanner sc = new Scanner(System.in);
+
+
+
+//int y= sc.nextInt();
+
+    Grille jeu = new Grille(5);
+    jeu.aleat();
+    System.out.print(jeu);
+    System.out.print("entrez les coordonées: "+"\n");
+    int x= sc.nextInt();
+    int y= sc.nextInt();
+    jeu.clic(x,y);
+
+
+}
 }

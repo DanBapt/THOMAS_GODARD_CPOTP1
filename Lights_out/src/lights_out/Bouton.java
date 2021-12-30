@@ -12,9 +12,9 @@ public class Bouton {
     String couleur;
     boolean on;
     
-    public Bouton(String unecouleur, boolean fab ){
+    public Bouton(String unecouleur, boolean bool ){
         couleur=unecouleur;
-        on= fab;
+        on= bool;
     }
 
 }
