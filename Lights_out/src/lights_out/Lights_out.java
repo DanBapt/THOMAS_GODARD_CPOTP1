@@ -31,13 +31,24 @@ Scanner sc = new Scanner(System.in);
 //int y= sc.nextInt();
 
     Grille jeu = new Grille(5);
-    jeu.aleat();
+   // jeu.aleat();
     System.out.print(jeu);
+    while(true){
     System.out.print("entrez les coordonées: "+"\n");
     int x= sc.nextInt();
     int y= sc.nextInt();
-    jeu.clic(x,y);
+    x=x-1;
+    y=y-1;
+    jeu.clic(y,x);
+    System.out.print(jeu);
+
+    
+    
+        
+
+}
 
 
 }
 }
+
