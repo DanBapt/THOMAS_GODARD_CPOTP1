@@ -14,24 +14,24 @@ class Grille {
 //    Bouton [][] BoutonJeu=new Bouton[taille][taille];
 private final boolean [][] Grille; 
 
-   public Grille(int taille){
+   public Grille(int taille){ // constructeur grille 
               Grille= new boolean[taille][taille];
          for (int i=0;i<taille;i++){
-            for (int j=0;j<taille;j++){
+            for (int j=0;j<taille;j++){  
                 Grille[i][j] = false;
             }
          }
     }
       
-    public String toString(){
+    public String toString(){ // methode affichage grille 
         String s="";
     for (int i=0; i<Grille.length;i++){
             for (int j=0; j<Grille.length;j++){
                 if (Grille[i][j]){
-                    s+="V ";
+                    s+="V "; // allumé 
                 }
                 else {
-                    s+="F ";
+                    s+="F "; // éteint
                 }  
             }
              s+="\n";
@@ -40,13 +40,13 @@ private final boolean [][] Grille;
     return s; 
 }
 
-    public void clic(int x, int y){   
+    public void clic(int x, int y){   // méthode changement lumières
         
-        if ( Grille[x][y]==false){
+        if ( Grille[x][y]==false){ 
              Grille[x][y]=true;
-             // 4 coins + Bords bas et droite 
+           
              
-            if(x==0 && y!=0 && y!=Grille.length-1){ // pour le bord gauche OK
+            if(x==0 && y!=0 && y!=Grille.length-1){ // pour le bord gauche 
                 if(Grille[x+1][y]==false){
                    Grille[x+1][y]=true;
                 }
@@ -66,7 +66,7 @@ private final boolean [][] Grille;
                  Grille[x][y-1]=false;
                 }
             }
-            if(y==0 && x!=0 && x!=Grille.length-1){  //pour le bord du haut OK
+            if(y==0 && x!=0 && x!=Grille.length-1){  //pour le bord du haut 
                 if(Grille[x+1][y]==false){
                 Grille[x+1][y]=true;
                 }
@@ -86,7 +86,7 @@ private final boolean [][] Grille;
                  Grille[x-1][y]=true;
                 }
             }
-            if(y==Grille.length-1 && x!=0 && x!=Grille.length-1){ // bord bas OK
+            if(y==Grille.length-1 && x!=0 && x!=Grille.length-1){ // bord bas 
                 if(Grille[x+1][y]==true){
                  Grille[x+1][y]=false;
                 }
@@ -107,7 +107,7 @@ private final boolean [][] Grille;
                 }
 
             }
-            if(x==Grille.length-1 && y!=0 && y!=Grille.length-1){// bord de droite OK
+            if(x==Grille.length-1 && y!=0 && y!=Grille.length-1){// bord de droite 
                 if(Grille[x][y+1]==true){
                  Grille[x][y+1]=false;
                 }
@@ -127,9 +127,7 @@ private final boolean [][] Grille;
                  Grille[x][y-1]=true;
                 }
             }
-            if(x==0 && y==0){ // coin haut gauche OK (aucun pb)
-//                Grille[1][0]=! Grille[1][0];
-//                Grille[0][1]=! Grille[0][1];
+            if(x==0 && y==0){ // coin haut gauche 
                 if(Grille[1][0]==false){
                 Grille[1][0]=true;
                 }
@@ -143,7 +141,7 @@ private final boolean [][] Grille;
                  Grille[0][1]=true;
                 }
             }
-            if(x==0 && y==4){ // coin bas gauche OK
+            if(x==0 && y==4){ // coin bas gauche 
                 if(Grille[0][3]==true){
                  Grille[0][3]=false;
                 }
@@ -157,7 +155,7 @@ private final boolean [][] Grille;
                  Grille[1][4]=true;
                 }
             }
-            if(x==Grille.length-1 && y==0){ // coin haut droite OK
+            if(x==Grille.length-1 && y==0){ // coin haut droite 
                 if(Grille[x][y+1]==true){
                  Grille[x][y+1]=false;
                 }
@@ -171,7 +169,7 @@ private final boolean [][] Grille;
                  Grille[x-1][y]=true;
                 }
             }
-            if(x==Grille.length-1 && y==Grille.length-1){ // coin bas droite OK
+            if(x==Grille.length-1 && y==Grille.length-1){ // coin bas droite 
                 
                 if(Grille[x-1][y]==true){
                  Grille[x-1][y]=false;
@@ -218,7 +216,7 @@ private final boolean [][] Grille;
         }
         else{
              Grille[x][y]=false;
-             if(x==0 && y!=0 && y!=Grille.length-1){ // pour le bord gauche OK
+             if(x==0 && y!=0 && y!=Grille.length-1){ // pour le bord gauche 
                 if(Grille[x+1][y]==false){
                    Grille[x+1][y]=true;
                 }
@@ -238,7 +236,7 @@ private final boolean [][] Grille;
                  Grille[x][y-1]=false;
                 }
             }
-            if(y==0 && x!=0 && x!=Grille.length-1){  //pour le bord du haut OK
+            if(y==0 && x!=0 && x!=Grille.length-1){  //pour le bord du haut 
                 if(Grille[x+1][y]==false){
                 Grille[x+1][y]=true;
                 }
@@ -258,7 +256,7 @@ private final boolean [][] Grille;
                  Grille[x-1][y]=true;
                 }
             }
-            if(y==Grille.length-1 && x!=0 && x!=Grille.length-1){ // bord bas OK
+            if(y==Grille.length-1 && x!=0 && x!=Grille.length-1){ // bord bas 
                 if(Grille[x+1][y]==true){
                  Grille[x+1][y]=false;
                 }
@@ -279,7 +277,7 @@ private final boolean [][] Grille;
                 }
 
             }
-            if(x==Grille.length-1 && y!=0 && y!=Grille.length-1){// bord de droite OK
+            if(x==Grille.length-1 && y!=0 && y!=Grille.length-1){// bord de droite 
                 if(Grille[x][y+1]==true){
                  Grille[x][y+1]=false;
                 }
@@ -299,9 +297,7 @@ private final boolean [][] Grille;
                  Grille[x][y-1]=true;
                 }
             }
-            if(x==0 && y==0){ // coin haut gauche OK (aucun pb)
-//                Grille[1][0]=! Grille[1][0];
-//                Grille[0][1]=! Grille[0][1];
+            if(x==0 && y==0){ // coin haut gauche 
                 if(Grille[1][0]==false){
                 Grille[1][0]=true;
                 }
@@ -315,7 +311,7 @@ private final boolean [][] Grille;
                  Grille[0][1]=true;
                 }
             }
-            if(x==0 && y==4){ // coin bas gauche OK
+            if(x==0 && y==4){ // coin bas gauche 
                 if(Grille[0][3]==true){
                  Grille[0][3]=false;
                 }
@@ -329,7 +325,7 @@ private final boolean [][] Grille;
                  Grille[1][4]=true;
                 }
             }
-            if(x==Grille.length-1 && y==0){ // coin haut droite OK
+            if(x==Grille.length-1 && y==0){ // coin haut droite 
                 if(Grille[x][y+1]==true){
                  Grille[x][y+1]=false;
                 }
@@ -343,7 +339,7 @@ private final boolean [][] Grille;
                  Grille[x-1][y]=true;
                 }
             }
-            if(x==Grille.length-1 && y==Grille.length-1){ // coin bas droite OK
+            if(x==Grille.length-1 && y==Grille.length-1){ // coin bas droite 
                 
                 if(Grille[x-1][y]==true){
                  Grille[x-1][y]=false;
@@ -394,7 +390,7 @@ private final boolean [][] Grille;
         
         
       
-    public void aleat(){
+    public void aleat(){ // methode qui remplie la grille de booleans aléatoires 
         String s="";
         for (int i=0; i<Grille.length;i++){
             for (int j=0; j<Grille.length;j++){
@@ -408,7 +404,7 @@ private final boolean [][] Grille;
             }
     }
     
-    public boolean finpartie(){
+    public boolean finpartie(){ // méthode qui vérifie si la partie est terminée 
        
         for (int i=0; i<Grille.length;i++){
             for (int j=0; j<Grille.length;j++){

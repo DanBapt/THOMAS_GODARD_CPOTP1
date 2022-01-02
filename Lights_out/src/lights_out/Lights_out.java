@@ -38,7 +38,7 @@ Joueur j= new Joueur(nomJ);
 
  
     
-    if(niveau == 2){
+    if(niveau == 2){ // niveau aléatoire 
         Grille jeu = new Grille(5);
         jeu.aleat();
         System.out.print(jeu);
@@ -65,7 +65,7 @@ Joueur j= new Joueur(nomJ);
    }
 
     }
-    if(niveau == 1){
+    if(niveau == 1){ // niveau initiation
         initiation grillefacile= new initiation(5);
         System.out.print(grillefacile);
         System.out.println("entrez un numero de colonne entre 0 et 4 puis un numero de ligne entre 0 et 4");
@@ -83,7 +83,7 @@ while(grillefacile.finpartie2()==false){
         System.out.print("Bravo " +nomJ+ ", tu as gagné en "+ cpt+" coup"+"\n");        }
 }
 }
-    if(niveau==3){
+    if(niveau==3){ // niveau difficile
         hard grillehard= new hard(5);
         System.out.print(grillehard);
         System.out.println("entrez un numero de colonne entre 0 et 4 puis un numero de ligne entre 0 et 4");
@@ -97,11 +97,10 @@ while(grillehard.finpartie2()==false){
     grillehard.clic2(y,x);
     System.out.print("nombre de coup: "+cpt+"\n");
     System.out.print(grillehard);
-     if (grillehard.finpartie2()==true){
+     if (grillehard.finpartie2()==true){ 
         System.out.print("Bravo " +nomJ+ ", tu as gagné en "+ cpt+" coup"+"\n");        }
 }
 
     }
 }
 }
-

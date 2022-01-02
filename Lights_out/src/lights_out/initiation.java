@@ -31,7 +31,7 @@ public class initiation {
              initiation[x][y]=true;
              // 4 coins + Bords bas et droite 
              
-            if(x==0 && y!=0 && y!=initiation.length-1){ // pour le bord gauche OK
+            if(x==0 && y!=0 && y!=initiation.length-1){ // pour le bord gauche  
                 if(initiation[x+1][y]==false){
                    initiation[x+1][y]=true;
                 }
@@ -51,7 +51,7 @@ public class initiation {
                  initiation[x][y-1]=false;
                 }
             }
-            if(y==0 && x!=0 && x!=initiation.length-1){  //pour le bord du haut OK
+            if(y==0 && x!=0 && x!=initiation.length-1){  //pour le bord du haut  
                 if(initiation[x+1][y]==false){
                 initiation[x+1][y]=true;
                 }
@@ -71,7 +71,7 @@ public class initiation {
                  initiation[x-1][y]=true;
                 }
             }
-            if(y==initiation.length-1 && x!=0 && x!=initiation.length-1){ // bord bas OK
+            if(y==initiation.length-1 && x!=0 && x!=initiation.length-1){ // bord bas  
                 if(initiation[x+1][y]==true){
                  initiation[x+1][y]=false;
                 }
@@ -92,7 +92,7 @@ public class initiation {
                 }
 
             }
-            if(x==initiation.length-1 && y!=0 && y!=initiation.length-1){// bord de droite OK
+            if(x==initiation.length-1 && y!=0 && y!=initiation.length-1){// bord de droite  
                 if(initiation[x][y+1]==true){
                  initiation[x][y+1]=false;
                 }
@@ -112,9 +112,7 @@ public class initiation {
                  initiation[x][y-1]=true;
                 }
             }
-            if(x==0 && y==0){ // coin haut gauche OK (aucun pb)
-//                initiation[1][0]=! initiation[1][0];
-//                initiation[0][1]=! initiation[0][1];
+            if(x==0 && y==0){ // coin haut gauche
                 if(initiation[1][0]==false){
                 initiation[1][0]=true;
                 }
@@ -128,7 +126,7 @@ public class initiation {
                  initiation[0][1]=true;
                 }
             }
-            if(x==0 && y==4){ // coin bas gauche OK
+            if(x==0 && y==4){ // coin bas gauche  
                 if(initiation[0][3]==true){
                  initiation[0][3]=false;
                 }
@@ -142,7 +140,7 @@ public class initiation {
                  initiation[1][4]=true;
                 }
             }
-            if(x==initiation.length-1 && y==0){ // coin haut droite OK
+            if(x==initiation.length-1 && y==0){ // coin haut droite  
                 if(initiation[x][y+1]==true){
                  initiation[x][y+1]=false;
                 }
@@ -156,7 +154,7 @@ public class initiation {
                  initiation[x-1][y]=true;
                 }
             }
-            if(x==initiation.length-1 && y==initiation.length-1){ // coin bas droite OK
+            if(x==initiation.length-1 && y==initiation.length-1){ // coin bas droite  
                 
                 if(initiation[x-1][y]==true){
                  initiation[x-1][y]=false;
@@ -203,7 +201,7 @@ public class initiation {
         }
         else{
              initiation[x][y]=false;
-             if(x==0 && y!=0 && y!=initiation.length-1){ // pour le bord gauche OK
+             if(x==0 && y!=0 && y!=initiation.length-1){ // pour le bord gauche  
                 if(initiation[x+1][y]==false){
                    initiation[x+1][y]=true;
                 }
@@ -223,7 +221,7 @@ public class initiation {
                  initiation[x][y-1]=false;
                 }
             }
-            if(y==0 && x!=0 && x!=initiation.length-1){  //pour le bord du haut OK
+            if(y==0 && x!=0 && x!=initiation.length-1){  //pour le bord du haut  
                 if(initiation[x+1][y]==false){
                 initiation[x+1][y]=true;
                 }
@@ -243,7 +241,7 @@ public class initiation {
                  initiation[x-1][y]=true;
                 }
             }
-            if(y==initiation.length-1 && x!=0 && x!=initiation.length-1){ // bord bas OK
+            if(y==initiation.length-1 && x!=0 && x!=initiation.length-1){ // bord bas  
                 if(initiation[x+1][y]==true){
                  initiation[x+1][y]=false;
                 }
@@ -264,7 +262,7 @@ public class initiation {
                 }
 
             }
-            if(x==initiation.length-1 && y!=0 && y!=initiation.length-1){// bord de droite OK
+            if(x==initiation.length-1 && y!=0 && y!=initiation.length-1){// bord de droite  
                 if(initiation[x][y+1]==true){
                  initiation[x][y+1]=false;
                 }
@@ -284,9 +282,8 @@ public class initiation {
                  initiation[x][y-1]=true;
                 }
             }
-            if(x==0 && y==0){ // coin haut gauche OK (aucun pb)
-//                initiation[1][0]=! initiation[1][0];
-//                initiation[0][1]=! initiation[0][1];
+            if(x==0 && y==0){ // coin haut gauche  
+
                 if(initiation[1][0]==false){
                 initiation[1][0]=true;
                 }
@@ -300,7 +297,7 @@ public class initiation {
                  initiation[0][1]=true;
                 }
             }
-            if(x==0 && y==4){ // coin bas gauche OK
+            if(x==0 && y==4){ // coin bas gauche  
                 if(initiation[0][3]==true){
                  initiation[0][3]=false;
                 }
@@ -314,7 +311,7 @@ public class initiation {
                  initiation[1][4]=true;
                 }
             }
-            if(x==initiation.length-1 && y==0){ // coin haut droite OK
+            if(x==initiation.length-1 && y==0){ // coin haut droite  
                 if(initiation[x][y+1]==true){
                  initiation[x][y+1]=false;
                 }
@@ -328,7 +325,7 @@ public class initiation {
                  initiation[x-1][y]=true;
                 }
             }
-            if(x==initiation.length-1 && y==initiation.length-1){ // coin bas droite OK
+            if(x==initiation.length-1 && y==initiation.length-1){ // coin bas droite  
                 
                 if(initiation[x-1][y]==true){
                  initiation[x-1][y]=false;
@@ -393,7 +390,7 @@ public class initiation {
     return s; 
    
 }
-           public boolean finpartie2(){ // ok 
+           public boolean finpartie2(){ //   
         for (int i=0; i<initiation.length;i++){
             for (int j=0; j<initiation.length;j++){
                 if(initiation[i][j]){
