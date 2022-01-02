@@ -25,8 +25,8 @@ public class initiation {
     initiation[2][1]=true;
 
     }
-   public int clic2(int x, int y){   
-        int cpt2=0;
+   public void clic2(int x, int y){   
+        
         if ( initiation[x][y]==false){
              initiation[x][y]=true;
              // 4 coins + Bords bas et droite 
@@ -373,8 +373,7 @@ public class initiation {
                 }
         }
         }
-        cpt2++;
-        return cpt2;
+        
         }
      
           public String toString(){

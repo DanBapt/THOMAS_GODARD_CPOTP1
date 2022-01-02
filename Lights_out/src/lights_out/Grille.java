@@ -40,8 +40,8 @@ private final boolean [][] Grille;
     return s; 
 }
 
-    public int clic(int x, int y){   
-        int cpt=0;
+    public void clic(int x, int y){   
+        
         if ( Grille[x][y]==false){
              Grille[x][y]=true;
              // 4 coins + Bords bas et droite 
@@ -388,8 +388,7 @@ private final boolean [][] Grille;
                 }
         }
         }
-        cpt++;
-        return cpt;
+      
         }
         
         
@@ -410,6 +409,7 @@ private final boolean [][] Grille;
     }
     
     public boolean finpartie(){
+       
         for (int i=0; i<Grille.length;i++){
             for (int j=0; j<Grille.length;j++){
                 if(Grille[i][j]){
@@ -421,5 +421,6 @@ private final boolean [][] Grille;
         return true;
 }
   
+   
 }
         

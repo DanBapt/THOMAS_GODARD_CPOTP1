@@ -26,7 +26,7 @@ public class Lights_out {
 
 Scanner sc = new Scanner(System.in);
 
-System.out.print("1=facile 2= normal");
+System.out.print("choisissez un niveau de difficulté :" + "\n" + "1:initiation" + "\n" + "2:aléatoire" + "\n"  + "3:difficile");
 int niveau = sc.nextInt();
 int cpt=0;
 int cpt2=0;
@@ -47,18 +47,16 @@ int cpt2=0;
 
     int x= sc.nextInt();
     int y= sc.nextInt();
-    
+    cpt++;
 
     System.out.print("X= "+x);
     System.out.print("Y= "+y+"\n");
     jeu.clic(y,x);
-    System.out.print("nombre de coup: "+cpt2+"\n");
-    
-    cpt2=jeu.clic(y,x);
+    System.out.print("nombre de coup: "+cpt+"\n");
     System.out.print(jeu);
     
        if (jeu.finpartie()==true){
-        System.out.print("Bravo vous avez gagné en "+ cpt2+" coup"+"\n");
+        System.out.print("Bravo vous avez gagné en "+ cpt+" coup"+"\n");
         }
        
    }
@@ -77,8 +75,7 @@ while(grillefacile.finpartie2()==false){
     System.out.print("X= "+x);
     System.out.print("Y= "+y+"\n");
     grillefacile.clic2(y,x);
-    System.out.print("nombre de coup: "+grillefacile.clic2(y,x)+"\n");
-     cpt=grillefacile.clic2(y,x);
+    System.out.print("nombre de coup: "+cpt+"\n");
     System.out.print(grillefacile);
      if (grillefacile.finpartie2()==true){
         System.out.print("Bravo vous avez gagné en "+ cpt+" coup");
