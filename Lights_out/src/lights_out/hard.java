@@ -36,7 +36,7 @@ public class hard {
              hard[x][y]=true;
              // 4 coins + Bords bas et droite 
              
-            if(x==0 && y!=0 && y!=hard.length-1){ // pour le bord gauche OK
+            if(x==0 && y!=0 && y!=hard.length-1){ // pour le bord gauche   
                 if(hard[x+1][y]==false){
                    hard[x+1][y]=true;
                 }
@@ -56,7 +56,7 @@ public class hard {
                  hard[x][y-1]=false;
                 }
             }
-            if(y==0 && x!=0 && x!=hard.length-1){  //pour le bord du haut OK
+            if(y==0 && x!=0 && x!=hard.length-1){  //pour le bord du haut   
                 if(hard[x+1][y]==false){
                 hard[x+1][y]=true;
                 }
@@ -76,7 +76,7 @@ public class hard {
                  hard[x-1][y]=true;
                 }
             }
-            if(y==hard.length-1 && x!=0 && x!=hard.length-1){ // bord bas OK
+            if(y==hard.length-1 && x!=0 && x!=hard.length-1){ // bord bas   
                 if(hard[x+1][y]==true){
                  hard[x+1][y]=false;
                 }
@@ -97,7 +97,7 @@ public class hard {
                 }
 
             }
-            if(x==hard.length-1 && y!=0 && y!=hard.length-1){// bord de droite OK
+            if(x==hard.length-1 && y!=0 && y!=hard.length-1){// bord de droite   
                 if(hard[x][y+1]==true){
                  hard[x][y+1]=false;
                 }
@@ -117,9 +117,8 @@ public class hard {
                  hard[x][y-1]=true;
                 }
             }
-            if(x==0 && y==0){ // coin haut gauche OK (aucun pb)
-//                hard[1][0]=! hard[1][0];
-//                hard[0][1]=! hard[0][1];
+            if(x==0 && y==0){ // coin haut gauche      
+
                 if(hard[1][0]==false){
                 hard[1][0]=true;
                 }
@@ -133,7 +132,7 @@ public class hard {
                  hard[0][1]=true;
                 }
             }
-            if(x==0 && y==4){ // coin bas gauche OK
+            if(x==0 && y==4){ // coin bas gauche   
                 if(hard[0][3]==true){
                  hard[0][3]=false;
                 }
@@ -147,7 +146,7 @@ public class hard {
                  hard[1][4]=true;
                 }
             }
-            if(x==hard.length-1 && y==0){ // coin haut droite OK
+            if(x==hard.length-1 && y==0){ // coin haut droite   
                 if(hard[x][y+1]==true){
                  hard[x][y+1]=false;
                 }
@@ -161,7 +160,7 @@ public class hard {
                  hard[x-1][y]=true;
                 }
             }
-            if(x==hard.length-1 && y==hard.length-1){ // coin bas droite OK
+            if(x==hard.length-1 && y==hard.length-1){ // coin bas droite   
                 
                 if(hard[x-1][y]==true){
                  hard[x-1][y]=false;
@@ -208,7 +207,7 @@ public class hard {
         }
         else{
              hard[x][y]=false;
-             if(x==0 && y!=0 && y!=hard.length-1){ // pour le bord gauche OK
+             if(x==0 && y!=0 && y!=hard.length-1){ // pour le bord gauche   
                 if(hard[x+1][y]==false){
                    hard[x+1][y]=true;
                 }
@@ -228,7 +227,7 @@ public class hard {
                  hard[x][y-1]=false;
                 }
             }
-            if(y==0 && x!=0 && x!=hard.length-1){  //pour le bord du haut OK
+            if(y==0 && x!=0 && x!=hard.length-1){  //pour le bord du haut   
                 if(hard[x+1][y]==false){
                 hard[x+1][y]=true;
                 }
@@ -248,7 +247,7 @@ public class hard {
                  hard[x-1][y]=true;
                 }
             }
-            if(y==hard.length-1 && x!=0 && x!=hard.length-1){ // bord bas OK
+            if(y==hard.length-1 && x!=0 && x!=hard.length-1){ // bord bas   
                 if(hard[x+1][y]==true){
                  hard[x+1][y]=false;
                 }
@@ -269,7 +268,7 @@ public class hard {
                 }
 
             }
-            if(x==hard.length-1 && y!=0 && y!=hard.length-1){// bord de droite OK
+            if(x==hard.length-1 && y!=0 && y!=hard.length-1){// bord de droite   
                 if(hard[x][y+1]==true){
                  hard[x][y+1]=false;
                 }
@@ -289,9 +288,8 @@ public class hard {
                  hard[x][y-1]=true;
                 }
             }
-            if(x==0 && y==0){ // coin haut gauche OK (aucun pb)
-//                hard[1][0]=! hard[1][0];
-//                hard[0][1]=! hard[0][1];
+            if(x==0 && y==0){ // coin haut gauche      
+
                 if(hard[1][0]==false){
                 hard[1][0]=true;
                 }
@@ -305,7 +303,7 @@ public class hard {
                  hard[0][1]=true;
                 }
             }
-            if(x==0 && y==4){ // coin bas gauche OK
+            if(x==0 && y==4){ // coin bas gauche   
                 if(hard[0][3]==true){
                  hard[0][3]=false;
                 }
@@ -319,7 +317,7 @@ public class hard {
                  hard[1][4]=true;
                 }
             }
-            if(x==hard.length-1 && y==0){ // coin haut droite OK
+            if(x==hard.length-1 && y==0){ // coin haut droite   
                 if(hard[x][y+1]==true){
                  hard[x][y+1]=false;
                 }
@@ -333,7 +331,7 @@ public class hard {
                  hard[x-1][y]=true;
                 }
             }
-            if(x==hard.length-1 && y==hard.length-1){ // coin bas droite OK
+            if(x==hard.length-1 && y==hard.length-1){ // coin bas droite   
                 
                 if(hard[x-1][y]==true){
                  hard[x-1][y]=false;
@@ -398,7 +396,7 @@ public class hard {
     return s; 
    
 }
-           public boolean finpartie2(){ // ok 
+           public boolean finpartie2(){ //    
         for (int i=0; i<hard.length;i++){
             for (int j=0; j<hard.length;j++){
                 if(hard[i][j]){
