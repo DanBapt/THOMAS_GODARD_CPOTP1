@@ -26,20 +26,23 @@ public class Lights_out {
 
 Scanner sc = new Scanner(System.in);
 
-System.out.print("choisissez un niveau de difficulté :" + "\n" + "1:initiation" + "\n" + "2:aléatoire" + "\n"  + "3:difficile");
+
+
+System.out.println("entrez votre pseudo: ");
+String nomJ= sc.nextLine();
+System.out.print("choisissez un niveau de difficulté :" + "\n" + "1:initiation" + "\n" + "2:aléatoire" + "\n"  + "3:difficile"+"\n");
 int niveau = sc.nextInt();
 int cpt=0;
-int cpt2=0;
-    
-    
-   
+
+Joueur j= new Joueur(nomJ);  
+
  
     
     if(niveau == 2){
         Grille jeu = new Grille(5);
         jeu.aleat();
-        
-            System.out.print(jeu);
+        System.out.print(jeu);
+        System.out.println("entrez un numero de colonne entre 0 et 4 puis un numero de ligne entre 0 et 4");
 
    while(jeu.finpartie()==false){
 //   while(true){
@@ -56,7 +59,7 @@ int cpt2=0;
     System.out.print(jeu);
     
        if (jeu.finpartie()==true){
-        System.out.print("Bravo vous avez gagné en "+ cpt+" coup"+"\n");
+        System.out.print("Bravo " +nomJ+ ", tu as gagné en "+ cpt+" coup"+"\n");
         }
        
    }
@@ -64,9 +67,8 @@ int cpt2=0;
     }
     if(niveau == 1){
         initiation grillefacile= new initiation(5);
-
-       
         System.out.print(grillefacile);
+        System.out.println("entrez un numero de colonne entre 0 et 4 puis un numero de ligne entre 0 et 4");
 while(grillefacile.finpartie2()==false){
   cpt++;
 
@@ -78,10 +80,28 @@ while(grillefacile.finpartie2()==false){
     System.out.print("nombre de coup: "+cpt+"\n");
     System.out.print(grillefacile);
      if (grillefacile.finpartie2()==true){
-        System.out.print("Bravo vous avez gagné en "+ cpt+" coup");
-        }
+        System.out.print("Bravo " +nomJ+ ", tu as gagné en "+ cpt+" coup"+"\n");        }
 }
 }
+    if(niveau==3){
+        hard grillehard= new hard(5);
+        System.out.print(grillehard);
+        System.out.println("entrez un numero de colonne entre 0 et 4 puis un numero de ligne entre 0 et 4");
+while(grillehard.finpartie2()==false){
+  cpt++;
+
+    int x= sc.nextInt();
+    int y= sc.nextInt();
+    System.out.print("X= "+x);
+    System.out.print("Y= "+y+"\n");
+    grillehard.clic2(y,x);
+    System.out.print("nombre de coup: "+cpt+"\n");
+    System.out.print(grillehard);
+     if (grillehard.finpartie2()==true){
+        System.out.print("Bravo " +nomJ+ ", tu as gagné en "+ cpt+" coup"+"\n");        }
+}
+
+    }
 }
 }
 

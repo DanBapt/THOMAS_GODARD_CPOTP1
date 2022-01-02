@@ -10,4 +10,8 @@ package lights_out;
  */
 public class Joueur {
     String Nom;
+    public Joueur(String unNom){
+        Nom= unNom;
+    }
 }
+
