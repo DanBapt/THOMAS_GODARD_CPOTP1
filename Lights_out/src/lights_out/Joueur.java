@@ -9,5 +9,5 @@ package lights_out;
  * @author danielthomas
  */
 public class Joueur {
-    
+    String Nom;
 }
