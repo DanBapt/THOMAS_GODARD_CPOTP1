@@ -12,7 +12,7 @@ import java.util.Random;
 class Grille {
    // int taille; 
 //    Bouton [][] BoutonJeu=new Bouton[taille][taille];
-private boolean [][] Grille; 
+private final boolean [][] Grille; 
 
    public Grille(int taille){
               Grille= new boolean[taille][taille];
@@ -39,162 +39,387 @@ private boolean [][] Grille;
    
     return s; 
 }
-    
 
-    public void clic(int x, int y){        
+    public int clic(int x, int y){   
+        int cpt=0;
         if ( Grille[x][y]==false){
              Grille[x][y]=true;
              // 4 coins + Bords bas et droite 
              
-            if(x==1 && y!=1 && y!=Grille.length){
+            if(x==0 && y!=0 && y!=Grille.length-1){ // pour le bord gauche OK
                 if(Grille[x+1][y]==false){
                    Grille[x+1][y]=true;
-            }
-                else if(Grille[x+1][y]==true){
+                }
+                else{
                  Grille[x+1][y]=false;
-            }
+                }
                 if(Grille[x][y+1]==true){
                      Grille[x][y+1]=false;
-             }
-                else if(Grille[x][y+1]==false){
+                }
+                else{
                      Grille[x][y+1]=true;
-             } 
-                if(Grille[x-1][y]==false){
-                   Grille[x-1][y]=true;
+                } 
+                if(Grille[x][y-1]==false){
+                   Grille[x][y-1]=true;
+                }
+                else{
+                 Grille[x][y-1]=false;
+                }
             }
-                else if(Grille[x-1][y]==true){
-                 Grille[x-1][y]=false;
-            }
-            }
-            else if(y==1 && x!=1 && x!=Grille.length){
+            if(y==0 && x!=0 && x!=Grille.length-1){  //pour le bord du haut OK
                 if(Grille[x+1][y]==false){
                 Grille[x+1][y]=true;
-            }
-            else if(Grille[x+1][y]==true){
+                }
+                else{
                 Grille[x+1][y]=false;
-            }
-             if(Grille[x][y+1]==true){
+                }
+                if(Grille[x][y+1]==true){
                  Grille[x][y+1]=false;
-             }
-             else if(Grille[x][y+1]==false){
+                }
+                else{
                  Grille[x][y+1]=true;
-             }
-             if(Grille[x][y-1]==true){
-                 Grille[x][y-1]=false;
-             }
-             else if(Grille[x][y-1]==false){
-                 Grille[x][y-1]=true;
-             }
-            }
-             else if(y==Grille.length && x!=1 && x!=Grille.length){
-       if(Grille[x+1][y]==false){
-                Grille[x+1][y]=true;
-            }
-            else if(Grille[x+1][y]==true){
-                Grille[x+1][y]=false;
-            }
-             if(Grille[x][y+1]==true){
-                 Grille[x][y+1]=false;
-             }
-//             else if(Grille[x][y+1]==false){
-//                 Grille[x][y+1]=true;
-//             }
-//             if(Grille[x-1][y]==true){
-//                 Grille[x-1][y]=false;
-//             }
-             else if(Grille[x-1][y]==false){
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
                  Grille[x-1][y]=true;
-             }
-             if(Grille[x][y-1]==true){
+                }
+            }
+            if(y==Grille.length-1 && x!=0 && x!=Grille.length-1){ // bord bas OK
+                if(Grille[x+1][y]==true){
+                 Grille[x+1][y]=false;
+                }
+                else{
+                 Grille[x+1][y]=true;
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+                if(Grille[x][y-1]==true){
                  Grille[x][y-1]=false;
-             }
-             else if(Grille[x][y-1]==false){
+                }
+                else{
                  Grille[x][y-1]=true;
-             }
+                }
 
             }
-//            else{
-//            if(Grille[x+1][y]==false){
-//                Grille[x+1][y]=true;
-//            }
-//            else if(Grille[x+1][y]==true){
-//                Grille[x+1][y]=false;
-//            }
-//             if(Grille[x][y+1]==true){
-//                 Grille[x][y+1]=false;
-//             }
-//             else if(Grille[x][y+1]==false){
-//                 Grille[x][y+1]=true;
-//             }
-//             if(Grille[x-1][y]==true){
-//                 Grille[x-1][y]=false;
-//             }
-//             else if(Grille[x-1][y]==false){
-//                 Grille[x-1][y]=true;
-//             }
-//             if(Grille[x][y-1]==true){
-//                 Grille[x][y-1]=false;
-//             }
-//             else if(Grille[x][y-1]==false){
-//                 Grille[x][y-1]=true;
-//             }
-//        
-//        
-//        else{
-//            Grille[x][y]=false;
-//            
-//           if(Grille[x+1][y]==false){
-//                Grille[x+1][y]=true;
-//            }
-//            else if(Grille[x+1][y]==true){
-//                Grille[x+1][y]=false;
-//            }
-//             if(Grille[x][y+1]==true){
-//                 Grille[x][y+1]=false;
-//             }
-//             else if(Grille[x][y+1]==false){
-//                 Grille[x][y+1]=true;
-//             }
-//             if(Grille[x-1][y]==true){
-//                 Grille[x-1][y]=false;
-//             }
-//             else if(Grille[x-1][y]==false){
-//                 Grille[x-1][y]=true;
-//             }
-//             if(Grille[x][y-1]==true){
-//                 Grille[x][y-1]=false;
-//             }
-//             else if(Grille[x][y-1]==false){
-//                 Grille[x][y-1]=true;
-//             }
-//        
-//        }
-//        }
-//        }
-//        }
-//        
-//      
-//    public void aleat(){
-//        String s="";
-//        for (int i=0; i<Grille.length;i++){
-//            for (int j=0; j<Grille.length;j++){
-//             Random r = new Random();
-//             int x= r.nextInt(2);
-//             if(x==0){
-//                Grille[i][j]= true;
-//            }
-//            }
+            if(x==Grille.length-1 && y!=0 && y!=Grille.length-1){// bord de droite OK
+                if(Grille[x][y+1]==true){
+                 Grille[x][y+1]=false;
+                }
+                else{
+                 Grille[x][y+1]=true;
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+                if(Grille[x][y-1]==true){
+                 Grille[x][y-1]=false;
+                }
+                else{
+                 Grille[x][y-1]=true;
+                }
+            }
+            if(x==0 && y==0){ // coin haut gauche OK (aucun pb)
+//                Grille[1][0]=! Grille[1][0];
+//                Grille[0][1]=! Grille[0][1];
+                if(Grille[1][0]==false){
+                Grille[1][0]=true;
+                }
+                else{
+                Grille[1][0]=false;
+                }
+                if(Grille[0][1]==true){
+                 Grille[0][1]=false;
+                }
+                else{
+                 Grille[0][1]=true;
+                }
+            }
+            if(x==0 && y==4){ // coin bas gauche OK
+                if(Grille[0][3]==true){
+                 Grille[0][3]=false;
+                }
+                else{
+                 Grille[0][3]=true;
+                }
+                if(Grille[1][4]==true){
+                 Grille[1][4]=false;
+                }
+                else{
+                 Grille[1][4]=true;
+                }
+            }
+            if(x==Grille.length-1 && y==0){ // coin haut droite OK
+                if(Grille[x][y+1]==true){
+                 Grille[x][y+1]=false;
+                }
+                else{
+                 Grille[x][y+1]=true;
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+            }
+            if(x==Grille.length-1 && y==Grille.length-1){ // coin bas droite OK
+                
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+                if(Grille[x][y-1]==true){
+                 Grille[x][y-1]=false;
+                }
+                else{
+                 Grille[x][y-1]=true;
+                }
+            }
+            
+        
+            
+        if(x!=0 && x!=Grille.length-1 && y!=0 && y!=Grille.length-1){ //centre 
+                if(Grille[x+1][y]==false){
+                Grille[x+1][y]=true;
+                }
+                else{
+                Grille[x+1][y]=false;
+                }
+                if(Grille[x][y+1]==true){
+                 Grille[x][y+1]=false;
+                }
+                else{
+                 Grille[x][y+1]=true;
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+                if(Grille[x][y-1]==true){
+                 Grille[x][y-1]=false;
+                }
+                else{
+                 Grille[x][y-1]=true;
+                }
+        }
+        }
+        else{
+             Grille[x][y]=false;
+             if(x==0 && y!=0 && y!=Grille.length-1){ // pour le bord gauche OK
+                if(Grille[x+1][y]==false){
+                   Grille[x+1][y]=true;
+                }
+                else{
+                 Grille[x+1][y]=false;
+                }
+                if(Grille[x][y+1]==true){
+                     Grille[x][y+1]=false;
+                }
+                else{
+                     Grille[x][y+1]=true;
+                } 
+                if(Grille[x][y-1]==false){
+                   Grille[x][y-1]=true;
+                }
+                else{
+                 Grille[x][y-1]=false;
+                }
+            }
+            if(y==0 && x!=0 && x!=Grille.length-1){  //pour le bord du haut OK
+                if(Grille[x+1][y]==false){
+                Grille[x+1][y]=true;
+                }
+                else{
+                Grille[x+1][y]=false;
+                }
+                if(Grille[x][y+1]==true){
+                 Grille[x][y+1]=false;
+                }
+                else{
+                 Grille[x][y+1]=true;
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+            }
+            if(y==Grille.length-1 && x!=0 && x!=Grille.length-1){ // bord bas OK
+                if(Grille[x+1][y]==true){
+                 Grille[x+1][y]=false;
+                }
+                else{
+                 Grille[x+1][y]=true;
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+                if(Grille[x][y-1]==true){
+                 Grille[x][y-1]=false;
+                }
+                else{
+                 Grille[x][y-1]=true;
+                }
+
+            }
+            if(x==Grille.length-1 && y!=0 && y!=Grille.length-1){// bord de droite OK
+                if(Grille[x][y+1]==true){
+                 Grille[x][y+1]=false;
+                }
+                else{
+                 Grille[x][y+1]=true;
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+                if(Grille[x][y-1]==true){
+                 Grille[x][y-1]=false;
+                }
+                else{
+                 Grille[x][y-1]=true;
+                }
+            }
+            if(x==0 && y==0){ // coin haut gauche OK (aucun pb)
+//                Grille[1][0]=! Grille[1][0];
+//                Grille[0][1]=! Grille[0][1];
+                if(Grille[1][0]==false){
+                Grille[1][0]=true;
+                }
+                else{
+                Grille[1][0]=false;
+                }
+                if(Grille[0][1]==true){
+                 Grille[0][1]=false;
+                }
+                else{
+                 Grille[0][1]=true;
+                }
+            }
+            if(x==0 && y==4){ // coin bas gauche OK
+                if(Grille[0][3]==true){
+                 Grille[0][3]=false;
+                }
+                else{
+                 Grille[0][3]=true;
+                }
+                if(Grille[1][4]==true){
+                 Grille[1][4]=false;
+                }
+                else{
+                 Grille[1][4]=true;
+                }
+            }
+            if(x==Grille.length-1 && y==0){ // coin haut droite OK
+                if(Grille[x][y+1]==true){
+                 Grille[x][y+1]=false;
+                }
+                else{
+                 Grille[x][y+1]=true;
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+            }
+            if(x==Grille.length-1 && y==Grille.length-1){ // coin bas droite OK
+                
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+                if(Grille[x][y-1]==true){
+                 Grille[x][y-1]=false;
+                }
+                else{
+                 Grille[x][y-1]=true;
+                }
+            }
+            
+        
+            
+        if(x!=0 && x!=Grille.length-1 && y!=0 && y!=Grille.length-1){ //centre 
+                if(Grille[x+1][y]==false){
+                Grille[x+1][y]=true;
+                }
+                else{
+                Grille[x+1][y]=false;
+                }
+                if(Grille[x][y+1]==true){
+                 Grille[x][y+1]=false;
+                }
+                else{
+                 Grille[x][y+1]=true;
+                }
+                if(Grille[x-1][y]==true){
+                 Grille[x-1][y]=false;
+                }
+                else{
+                 Grille[x-1][y]=true;
+                }
+                if(Grille[x][y-1]==true){
+                 Grille[x][y-1]=false;
+                }
+                else{
+                 Grille[x][y-1]=true;
+                }
+        }
+        }
+        cpt++;
+        return cpt;
+        }
+        
+        
+        
+      
+    public void aleat(){
+        String s="";
+        for (int i=0; i<Grille.length;i++){
+            for (int j=0; j<Grille.length;j++){
+             Random r = new Random();
+             int x= r.nextInt(2);
+             if(x==0){
+                Grille[i][j]= true;
+            }
+            }
       
             }
     }
+    
+    public boolean finpartie(){
+        for (int i=0; i<Grille.length;i++){
+            for (int j=0; j<Grille.length;j++){
+                if(Grille[i][j]){
+                    return false; 
+                }
+            }
+            
+    }
+        return true;
 }
-
+  
+}
         
-//          for (int i=0; i<Grille.length;i++){
-//            for (int j=0; j<Grille.length;j++){
-//                while(Grille[i][j]==false){
-//                    System.out.print("c'est la win bg");
-                
-//                }
-//   }
-//}
